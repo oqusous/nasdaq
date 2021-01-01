@@ -127,7 +127,7 @@ The following patterns are detected:<br>
 
 Second method utilized to determine the order of ARMA is interpreting the ACF and PACF plots below.<br>
 
-![ACF PCAF](Images/Picture1.PNG)
+![ACF PCAF](Images/Picture1.png)
 
 The PACF and ACF plots using statsmodels library show the shaded blue area which is the confidence intervals where the standard deviation is computed according to Bartlett’s formula \[2]. The plotted stems that protrude beyond the shaded area are indicators for the orders that can be used when fitting autoregressive (AR) and moving-average (MA) models. ACF can help determine the order of MA- here the plot shows that orders 3, 6 and 11 may be used. The PACF plot helps determine the order of MA, which could also shows them to be at lags 3, 6 and 11. <br>
 
@@ -136,19 +136,19 @@ Finally a GirdSearch-esque method is used to determine the best AR and MA orders
 
 The condtions on the gs_arma_table below check which out of the 42 order combinations have all the Ar and Ma parameter p-values less than 0.05 and Q p-value greater than 0.05.<br>
 
-![grid search](Images/Picture2.PNG)
+![grid search](Images/Picture2.png)
 
 \* Table column names key:
 *Order*: ARMA(na,nb) order; *AIC*: AIC of the model; *ResidQ* and *Q_Pvalue* are the residuals box-pierce Q and corresponding p-value; *ArMa Params* are ARMA parameters ordered as a1, a2,..,an,b1,b2,..,bn if na and nb are non-zero, these numberings are shown in column *aibi*; *ParamsPvalues*: ARMA parameters p-values in same order as ArMA Params column; *ConfInt_n* is lower limit of a parameter's confidence internval and *ConfInt_p* is the upper limit; and *ParamRoots* are the roots of the AR and MA systems.<br>
 
 GPAC table and GridSearch agree on ARMA(3,4) as potential orders to model NASDAQ price with. I will additionally consider ARMA(2,1), ARMA(6,5) and ARMA(5,5) from GridSearch results. Below is zero/cancellation check for each of the patterns.  The table divides the roots of the same order number (min(ai,bi)/max(ai,bi)) upto the last parameter with the smaller order number.<br>
 
-![root cancellation](Images/Picture3.PNG)
+![root cancellation](Images/Picture3.png)
 
 ![ARMA(1,2) and ARMA(2,1) One Step Prediction](Images/arma2112ored.png)
 ![ARMA(1,2) H Step Forecast](Images/ARMA_12.png)
 ![ARMA(2,1) H Step Forecast](Images/ARMA_21.png)
-![ARMA(2,1) residual ACF](Image/ARMA(2,1)_resiudals_plot_with_20_lags.png)
+![ARMA(2,1) residual ACF](Image/ARMA21_resiudals_plot_with_20_lags.png)
 
 Method | Q-Value | Q p-value | Var Fore Er/Var Res | MSE Residuals | Mean of Residuals | MSE Forecast Errors |
 -------|---------|-----------|---------------------|---------------|-------------------|-----------------------|
@@ -157,7 +157,7 @@ ARMA(2,1) | 26 | 0.15 | 488152 | 0.00 | 0.00 | 1011 |
 
 Both ARMA models residuals have Q p-values > 0.05 indicating the residuals are White Noise. This indicates the models are good at extracting the all of the information within the data. Also, the mean of residuals is very close to 0 indicating it the models are unbiased. However, both the MSE forecast errors and ratio of forecast to residual variances are very large indicating that the forecast capability of these models is weak. As such, an ARIMA model will be fitted to seek and improve the forecast results. Please refer to Appendix for a plot of the ARMA forecast using the manual loop method and the forecast method in the TSA library for comparision purposes.<br>
 
-![GirdSearch ARIMA](Image/Picture4.PNG)
+![GirdSearch ARIMA](Image/Picture4.png)
 \* Table column names key:
 *Order*: ARMA(na,nb) order; *AIC*: AIC of the model; *ResidQ* and *Q_Pvalue* are the residuals box-pierce Q and corresponding p-value; *ArMa Params* are ARMA parameters ordered as a1, a2,..,an,b1,b2,..,bn if na and nb are non-zero, these numberings are shown in column *aibi*; *ParamsPvalues*: ARMA parameters p-values in same order as ArMA Params column; *ConfInt_n* is lower limit of a parameter's confidence internval and *ConfInt_p* is the upper limit; and *ParamRoots* are the roots of the AR and MA systems.<br>
 
@@ -165,7 +165,7 @@ None of the fitted models has a case where all parameters p-values are below 0.0
 
 ![ARIMA(3,1,4) One Step Prediction](Image/arIma314_pred.png)
 ![ARIMA(3,1,4) H Step Forecast](Images/TSA_ARIMA_314.png)
-![ARMA(3,1,4) residual ACF](Image/ARIMA(3,1,4)_resiudals_plot_with_20_lags.png)
+![ARMA(3,1,4) residual ACF](Image/ARIMA314_resiudals_plot_with_20_lags.png)
 
 Method | Q-Value | Q p-value | Var Fore Er/Var Res | MSE Residuals | Mean of Residuals | MSE Forecast Errors |
 -------|---------|-----------|---------------------|---------------|-------------------|-----------------------|
