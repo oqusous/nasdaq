@@ -148,7 +148,7 @@ GPAC table and GridSearch agree on ARMA(3,4) as potential orders to model NASDAQ
 ![ARMA(1,2) and ARMA(2,1) One Step Prediction](Images/arma2112ored.png)
 ![ARMA(1,2) H Step Forecast](Images/ARMA_12.png)
 ![ARMA(2,1) H Step Forecast](Images/ARMA_21.png)
-![ARMA(2,1) residual ACF](Image/ARMA(2,1)_resiudals_plot_with_20_lags.png)
+![ARMA(2,1) residual ACF](Image/ARMA21_resiudals_plot_with_20_lags.png)
 
 Method | Q-Value | Q p-value | Var Fore Er/Var Res | MSE Residuals | Mean of Residuals | MSE Forecast Errors |
 -------|---------|-----------|---------------------|---------------|-------------------|-----------------------|
@@ -165,7 +165,7 @@ None of the fitted models has a case where all parameters p-values are below 0.0
 
 ![ARIMA(3,1,4) One Step Prediction](Image/arIma314_pred.png)
 ![ARIMA(3,1,4) H Step Forecast](Images/TSA_ARIMA_314.png)
-![ARMA(3,1,4) residual ACF](Image/ARIMA(3,1,4)_resiudals_plot_with_20_lags.png)
+![ARMA(3,1,4) residual ACF](Image/ARIMA314_resiudals_plot_with_20_lags.png)
 
 Method | Q-Value | Q p-value | Var Fore Er/Var Res | MSE Residuals | Mean of Residuals | MSE Forecast Errors |
 -------|---------|-----------|---------------------|---------------|-------------------|-----------------------|
