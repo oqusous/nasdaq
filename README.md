@@ -50,6 +50,9 @@ The strength of seasonality for the NASDAQ stock price set is 0.2024
 ## ARMA and ARIMA
 
 ![GPAC table](Images/gpac.png)
+![ACF PCAF](Images/Picture1.png)
+![grid search](Images/Picture2.png)
+![root cancellation](Images/Picture3.png)
 
 ![ARMA(1,2) and ARMA(2,1) One Step Prediction](Images/arma2112ored.png)
 ![ARMA(1,2) H Step Forecast](Images/ARMA_12.png)
