@@ -8,3 +8,52 @@ The data is obtained from http://macrotrends.net/ and it consists of the daily m
 
 ## NASDAQ - Original Data (Train Set)
 ![NASDAQ - Original Data (Train Set)](Images/NASDAQ_Stock_Price_at_COB_vs_Date.png)
+
+![Train Set ACF plot](Images/ACF_plot_with_20_lags_for_NADAQ_Stock_Price.png)
+
+![Histogram of NASDAQ stock price](Images/Histogram_of_COB_NASDAQ_stock_price.png)
+
+ADF Statistic: 0.2751
+p-value: 0.9761
+
+## NASDAQ - Differenced Log of Data
+
+![NASDAQ - Differenced Log of Data](Images/Differenced_Log_of_NASDAQ_Stock_Price_at_COB.png)
+
+![Differenced Log of Data Train Set ACF plot](Images/NASDAQ_Differenced_Log_of_COB_NASDAQ_price_ACF_plot_with_20_lags.png)
+
+![Histogram of differenced Log of COB NASDAQ stock price](Images/Histogram_of_differenced_Log_of_COB_NASDAQ_stock_price.png)
+
+## NASDAQ - Time Decomposition
+
+![Decomposed data](Images/tdecomp.png)
+
+The strength of Trend for the NASDAQ stock price set is 0.9676
+
+The strength of seasonality for the NASDAQ stock price set is 0.2024
+
+## NASDAQ Baseline Models
+
+![Average](Images/Average_Method_v2.png)
+![Naive](Images/Naive_Method_v2.png)
+![Drift](Images/Drift_Method_v2.png)
+![SES alpha = 0.4](Images/SES_alpha=_0.4_Method_v2.png)
+![SES alpha = 0.8](Images/SES_alpha=_0.8_Method_v2.png)
+
+## Holt Linear and Holt-Winter Seasonal Methods
+
+![Holt Linear Method (HLM)](Images/hml.png)
+![Holt-Winter Seasonal Method (HWSM)](Images/hws.png)
+
+![Residual ACF plots for Average, Naive, Drift, SES, HLM,HWSM](Images/NASDAQ.png)
+
+## ARMA and ARIMA
+
+![GPAC table](Images/gpac.png)
+
+![ARMA(1,2) and ARMA(2,1) One Step Prediction](Images/arma2112ored.png)
+![ARMA(1,2) H Step Forecast](Images/ARMA_12.png)
+![ARMA(2,1) H Step Forecast](Images/ARMA_21.png)
+
+
+
