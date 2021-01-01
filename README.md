@@ -7,4 +7,4 @@ The data is then modeled using Average, Naïve, Simple Exponential Smoothening, 
 The data is obtained from http://macrotrends.net/ and it consists of the daily market closing, market opening, highest and lowest price of the day and the volume of shares traded on the day. The target will be to predict the closing price of IXIC. The first datapoint is taken dated “2002-07-01” and the last is “2020-11-27” (format = Year-month-day). 80% of the data will be used as a model training dataset (2002-07-01 – 2017-03-23) and 20% of the data will bused as a testing dataset for the trained models (2017-03-24 – 2020-11-27)<br>.
 
 ## NASDAQ - Original Data (Train Set)
-![GitHub Logo](/Images/NASDAQ\ Stock\ Price\ at\ COB\ vs\ Date.png)
+![NASDAQ - Original Data (Train Set)](/Images/NASDAQ Stock Price at COB vs Date.png)
