@@ -145,10 +145,10 @@ GPAC table and GridSearch agree on ARMA(3,4) as potential orders to model NASDAQ
 
 ![root cancellation](Images/Picture3.png)
 
-![ARMA(1,2) and ARMA(2,1) One Step Prediction](Images/arma2112ored.png)
-![ARMA(1,2) H Step Forecast](Images/ARMA_12.png)
-![ARMA(2,1) H Step Forecast](Images/ARMA_21.png)
-![ARMA(2,1) residual ACF](Image/ARMA21_resiudals_plot_with_20_lags.png)
+![ARMA12 and ARMA21 One Step Prediction](Images/arma2112ored.png)
+![ARMA12 H Step Forecast](Images/ARMA_12.png)
+![ARMA21 H Step Forecast](Images/ARMA_21.png)
+![ARMA21 residual ACF](Image/ARMA21_resiudals_plot_with_20_lags.png)
 
 Method | Q-Value | Q p-value | Var Fore Er/Var Res | MSE Residuals | Mean of Residuals | MSE Forecast Errors |
 -------|---------|-----------|---------------------|---------------|-------------------|-----------------------|
@@ -163,9 +163,9 @@ Both ARMA models residuals have Q p-values > 0.05 indicating the residuals are W
 
 None of the fitted models has a case where all parameters p-values are below 0.05. The order that strikes the best balance in having low Q value and lowest possible p-values is order ARIMA(3,1,4). This order also matches one of the pattern in GPAC table. Final step is to make sure the roots of the parameters do not cancel out. The table divides the roots of the same order number (min(ai,bi)/max(ai,bi)) upto the last parameter with the smaller order number.
 
-![ARIMA(3,1,4) One Step Prediction](Image/arIma314_pred.png)
-![ARIMA(3,1,4) H Step Forecast](Images/TSA_ARIMA_314.png)
-![ARMA(3,1,4) residual ACF](Image/ARIMA314_resiudals_plot_with_20_lags.png)
+![ARIMA314 One Step Prediction](Image/arIma314_pred.png)
+![ARIMA314 H Step Forecast](Images/TSA_ARIMA_314.png)
+![ARMA314 residual ACF](Image/ARIMA314_resiudals_plot_with_20_lags.png)
 
 Method | Q-Value | Q p-value | Var Fore Er/Var Res | MSE Residuals | Mean of Residuals | MSE Forecast Errors |
 -------|---------|-----------|---------------------|---------------|-------------------|-----------------------|
